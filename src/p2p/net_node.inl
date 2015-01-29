@@ -189,14 +189,14 @@ namespace nodetool
     }
   }
 
-  #define ADD_HARDCODED_SEED_NODE(addr) append_net_address(m_seed_nodes, addr);
+  #define ADD_HARDCODED_SEED_NODE(104.131.187.197) append_net_address(m_seed_nodes, addr);
   //-----------------------------------------------------------------------------------
   template<class t_payload_net_handler>
   bool node_server<t_payload_net_handler>::init(const boost::program_options::variables_map& vm, bool testnet)
   {
     if (!testnet) {
       //TODO add seed for your network
-      //ADD_HARDCODED_SEED_NODE("your_seed_ip.com:8080");
+      ADD_HARDCODED_SEED_NODE("104.131.187.197:17236");
     } else {
       m_network_id.data[0] += 1;
     }
