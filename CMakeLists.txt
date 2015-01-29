@@ -7,6 +7,8 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release")
 enable_testing()
 
+set_property(TARGET daemon PROPERTY OUTPUT_NAME "moneta")
+
 include_directories(include src contrib/epee/include external "${CMAKE_BINARY_DIR}/version")
 if(APPLE)
   include_directories(SYSTEM /usr/include/malloc)
